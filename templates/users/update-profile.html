@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Update|Profile {% endblock %}
+{% block content  %}
+
+    <!-- Update profile page -->
+
+    <div class="add_post_box">
+        <h1 class="add_post_title">Update Actor</h1>
+        <form action="" method="POST" class="add_post add_actor form_design">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+{% endblock %}

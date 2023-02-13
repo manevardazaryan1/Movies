@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} Movie Detail {% endblock %}
+{% load static %}
+{% block content  %}
+
+<!-- Movie Detail -->
+
+<div class="detail_main">
+    <div class="container-large">
+<       <div class="container">
+            <h1 class="main_title">{{ movie.name }}</h1>
+            <div class="movies row movie_detail">
+                <div class="">
+                    <div class="actor_main_box">
+                        <div class="date_of_birth_rate_box">
+                            <span>Year | {{ movie.year}}</span>
+                            <span>Rate |
+                                {% for r in rate %}
+                                    <img src="{% static 'images/rate_icon/star_rate.svg' %}" alt="" class="rate">
+                                {% endfor %}
+                            <span>
+                        </div>
+                        <div class="actor_box">
+                            <div><img src="{% if movie.image %}{{ movie.image.url }}{% endif %}" alt="{{movie.name}}"></div>
+                        </div>
+                        <div class="actor_content row">
+                            <div class="col1 col">
+                                <div class="detail_img"><img width="500" src="{% if movie.image %}{{ movie.image.url }}{% endif %}" alt="{{movie.name}}"></div>
+                            </div>
+                            <div class="col2 col scrol_effect">
+                                <h3>{{ movie.name }}</h3>
+                                <p>{{ movie.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_update_delete_btn">
+                <div class="update_delete_btn form_design">
+                    <a href="{% url 'movie:update' movie.pk %}" class="btn log_reg_button">Update</a>
+                    <a href="{% url 'movie:delete' movie.pk %}" class="btn log_reg_button">Delete</a>
+                </div>
+            </div>
+            <div class="role role_detail">
+                <div class="">
+                    <h4>Actors</h4>
+                    <div class="detail_movie_box">
+                    {% if movie.actors.all  %}
+                        {% for actor in movie.actors.all %}
+                        <a href="{{ actor.get_absolute_url }}" data-tooltip="Person {{ forloop.counter }}" data-placement="top" class="detail_mov_act_img">
+                            <img src="{% if actor.image %}{{ actor.image.url }}{% endif %}" alt="avatar1"/>
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

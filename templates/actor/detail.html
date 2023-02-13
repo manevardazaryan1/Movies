@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %} Actor Detail {% endblock %}
+{% load static %}
+{% block content  %}
+
+<!-- Actor Detail -->
+
+<div class="detail_main">
+    <div class="container-large">
+        <div class="container">
+            <h1 class="main_title">{{ actor.first_name }} {{ actor.last_name }}</h1>
+            <div class="movies row movie_detail">
+                <div class="container">
+                    <div class="actor_main_box">
+                        <div class="date_of_birth_rate_box">
+                            <span>Date of birth | {{ actor.date_of_birth }}</span>
+                            <span>Rate |
+                                {% for r in rate %}
+                                    <img src="{% static 'images/rate_icon/star_rate.svg' %}" alt="" class="rate">
+                                {% endfor %}
+                            <span>
+                        </div>
+                        <div class="actor_box">
+                            <div>
+                                <img src="{% if actor.image %}{{ actor.image.url }}{% endif %}" alt="">
+                            </div>
+                        </div>
+                        <div class="actor_content row">
+                            <div class="col1 col">
+                                <div class="detail_img"><img width="500" src="{% if actor.image %}{{ actor.image.url }}{% endif %}" alt="{{ actor.first_name }} {{ actor.last_name }}"></div>
+                            </div>
+                            <div class="col2 col">
+                                <h3>{{ actor.first_name }} {{ actor.last_name }}</h3>
+                                <p>{{ actor.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_update_delete_btn">
+                <div class="update_delete_btn form_design">
+                    <a href="{% url 'actor:update' actor.pk %}" class="btn log_reg_button">Update</a>
+                    <a href="{% url 'actor:delete' actor.pk %}" class="btn log_reg_button">Delete</a>
+                </div>
+            </div>
+            <div class="role role_detail">
+                <div class="">
+                    <h4>Movies</h4>
+                    <div class="detail_movie_box">
+                        {% for movie in actor.movies.all %}
+                            <a href="{{ movie.get_absolute_url }}" class="detail_mov_act_img">
+                                <img src="{% if movie.image %}{{ movie.image.url }}{% endif %}" alt="">
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

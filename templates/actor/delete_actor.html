@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Delete|Actor {% endblock %}
+{% block content %}
+
+    <!-- Delete actor form html -->
+
+    <div class="container delete_box">  
+    <div class="form_design">
+        <form method="POST" class="">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <a href="{% url 'actor:actors' %}"><button type="submit" class="btn btn-primary">Cancel</button></a>
+    </div>
+</div>
+{% endblock  %}

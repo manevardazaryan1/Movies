@@ -1,0 +1,42 @@
+{% load static %}
+
+<!-- Site menu -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand logo" href="{% url 'movie:index' %}">
+        <img src="{% static 'images/logo/logo.png' %}" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'movie:index' %}">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'actor:actors' %}">Actors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'movie:add_movie' %}">Add movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'actor:add_actor' %}">Add actor</a>
+          </li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle log_reg_button" type="button" data-bs-toggle="dropdown">User</button>
+          <ul class="dropdown-menu log_reg_drop">
+            {% if request.user.is_authenticated %}
+              <li><a href="{% url 'users:profile' request.user.username %}" class="navbar-brand">Profile</a></li>
+              <li><a class="navbar-brand" href="{% url 'users:logout' %}">Logout</a></li>
+            {% else %}
+              <li><a class="navbar-brand" href="{% url 'users:register' %}">Register</a></li>
+              <li><a class="navbar-brand" href="{% url 'users:login' %}">Login</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>

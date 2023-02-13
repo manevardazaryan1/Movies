@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %} Movies Site {% endblock %}
+{% block content  %}
+
+    <!-- Site index html -->
+
+    <div class="container">
+        <h1 class="title">Movies</h1>
+        <section id="header" class="jumbotron text-center">
+            <form action="" class="form_design search_movie_actor">
+                <label for=""><strong>Search</strong></label>
+                {{ form }}
+                {# <input type="search" name="name" id="">#}
+                <button class="btn btn-primary">Search</button>
+            </form>
+        </section>
+        <div class="movies row">
+            {% for item in movie %}
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xsm-12">
+                    <div class="movie_content">
+                        <div class="movie_box">
+                            <div class="img_box"><img src="{% if item.image %}{{ item.image.url }}{% endif %}" alt="{{item.name}}"></div>
+                            <h3 class="movie_title scroll_effect">{{ item.name }}</h3>
+                            <p class="movie_description scroll_effect">{{ item.description | truncatechars:85}}</p>
+                            <span class="movie_year">{{ item.year }}</span>
+                            <a href="{% url 'movie:detail' item.id %}" class="btn btn-primary movie_btn">Detail Page</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="...">
+            <ul class="pagination d-flex justify-content-end">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                </li>
+                {% endif %}
+                <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}

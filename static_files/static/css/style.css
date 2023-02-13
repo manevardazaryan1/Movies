@@ -1,0 +1,1005 @@
+/* styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container,
+.container-large{
+    padding: 10px;
+}
+
+html{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+}
+
+
+body{
+    overflow-x: hidden;
+    height: 100% !important;
+    min-height: 100vh;
+    background: linear-gradient(to left, #000000, #8a0202, #000000);
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+nav.navbar{
+    box-shadow: 1px 1px 5px #5d2323;
+    background: #000 !important;
+    position: relative;
+}
+
+nav.navbar::after{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    animation: color_animation 20s linear infinite;
+    transition: all 3s ease-in-out;
+    background: #00ffe6;
+}
+
+@keyframes color_animation{
+    0%{
+        background:  #00ffe6;
+        transition: all 5s ease-in-out;
+    }
+
+    25%{
+        background:  #000;
+        transition: all 5s ease-in-out;
+    }
+
+    50%{
+        background: #ff1313;
+        transition: all 5s ease-in-out;
+    }
+
+    100%{
+        background: #00ffe6;
+        transition: all 5s ease-in-out;
+    }
+}
+
+nav ul li a{
+    color: #fff !important;
+    font-size: 21px !important;
+    background: -webkit-linear-gradient(#e62626, #84ffe8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.role_detail,
+.movies:not(.movie_detail){
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(to left, #050505d6, #2b121242, #000000d6);
+    backdrop-filter: blur(99px);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #5d2323;
+    padding: 20px;
+}
+
+.movies{
+    padding-bottom: 0 !important;
+}
+
+.role_detail{
+    display: inline-flex;
+}
+
+.role_detail h4{
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.title{
+    color: #00ffe6;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    text-shadow: 1px 1px 5px #ff1313;
+    text-align: center;
+    font-size: 75px;
+}
+
+.img_box{
+    height: 300px;
+    width: auto;
+    overflow: hidden;
+}
+
+.img_box img{
+    width: 100% !important;
+    height: auto !important;
+}
+
+.movie_content{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #000000bd;
+    border-top: 3px solid #00ffe6;
+    box-shadow: 3px 3px 20px #0d2221;
+}
+
+.main_title{
+    margin: 0 !important;
+    padding-top: 30px;
+}
+
+.main
+.add_post_box{
+    min-height: 100vh;
+}
+
+.detail_main{
+    height: 100%;
+}
+
+.search_button,
+.movie_description,
+.movie_year{
+    color: #fff;
+}
+
+.movie_title{
+    margin-top: 20px;
+    color: #00ffe6;
+    max-height: 100px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    font-size: 19px;
+    text-align: center;
+    background: #ff000014;
+    border: 1px solid #00ffe6;
+    border-radius: 5px;
+    box-shadow: 2px 2px 11px #932929;
+}
+
+.actor_title{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+.search_button{
+    padding: 10px;
+}
+
+.movie_year{
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+.movie_description{
+    font-size: 15px;
+    max-height: 120px;
+    overflow-y: auto;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.log_reg_button{
+    border-radius: 10px !important;
+    border: none !important;
+    background: -webkit-linear-gradient(#00ffe6, #42321f, #ff1313) !important;
+    min-width: 100px;
+    box-shadow: 3px 3px 20px #932929;
+    color: #fff !important;
+    transition: all .5s ease-in-out;
+}
+
+.movie_btn:hover,
+.form_design button:hover,
+.log_reg_button:hover{
+    box-shadow: 1px 1px 20px #3b1414;
+    transition: all .5s ease-in-out;
+}
+
+.search input:active{
+    color: #fff;
+}
+
+.pagination{
+    margin-top: 50px;
+}
+
+.movie_btn{
+    border-radius: 5px !important;
+    border: none!important;
+    background: -webkit-linear-gradient(#00ffe6, #42321f, #ff1313);
+    box-shadow: 3px 3px 20px #932929;
+    width: 100%;
+}
+
+.logo{
+    font-size: 72px !important;background: #333333; 
+    background: -webkit-linear-gradient(#00ffe6, #42321f, #ff1313);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jumbotron{
+    margin-bottom: 50px;
+}
+
+.actor_main_box{
+    position: relative;
+    margin-top: 20px;
+}
+
+.detail_main .movies.row{
+    margin-bottom: 225px;
+}
+
+.detail_mov_act_img{
+    overflow: hidden;
+    border: 2px solid #00ffe6;
+    border-radius: 10px;
+    width: 175px;
+    margin-right: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff6e;
+    position: relative;
+    perspective: 100px;
+    overflow: hidden;
+    box-shadow: 5px 5px 35px #050d0c;
+}
+
+.detail_mov_act_img:after,
+.detail_mov_act_img:before{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(32deg) rotateZ(0deg);
+    z-index: -1;
+}
+
+.detail_mov_act_img:before{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00ffe6;
+}
+
+.detail_mov_act_img:after{
+    top: 1%;
+    width: 98%;
+    height: 98%;
+    background: #000;
+}
+
+.role h4{
+    color: #00ffe6;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.detail_mov_act_img img{
+    border-radius: 10px;
+}
+
+.actor_content{
+    top: 125px;
+    left: 0;
+    position: absolute;
+    padding-right: 20px;
+    border-radius: 10px;
+    background: #ffffff42;
+    box-shadow: 5px 5px 35px #3d4745;
+}
+
+.actor_box img{
+    width: 75%;
+    scale: .5;
+    height: auto;
+    filter: brightness(50%);
+    transform: translateY(-50%);
+}
+
+.actor_box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail_main .container-large{
+    background: linear-gradient(to left, #000000, #0b8b7e, #000000);
+    min-height: 100vh;
+}
+
+.actor_box{
+    max-height: 650px;
+    overflow: hidden;
+    filter: blur(5px);
+    background: #000;
+}
+
+.detail_img{
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    perspective: 100px;
+    overflow: hidden;
+}
+
+.detail_img::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #00ffe6;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateY(34deg) rotateZ(-40deg);
+}
+
+.col1{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.detail_img img{
+    height: 650px;
+    width: auto;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.col2{
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    max-height: 650px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    background: rgb(0 0 0 / 75%);
+    border-top: 3px solid #00ffe6;
+    box-shadow: 5px 5px 35px #050d0c;
+}
+
+.main_title{
+    color: #fff;
+}
+
+.add_post_title{
+    color: #00ffe6;
+    text-align: center;
+    text-shadow: 1px 1px 5px #ff1313;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.form_design{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: linear-gradient(to left, #050505d6, #2b121242, #000000d6);
+    backdrop-filter: blur(99px);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #5d2323;
+}
+.add_post_box{
+    background: -webkit-linear-gradient(#00ffe6, #42321f, #ff1313);
+    padding: 50px;
+}
+.form_design p,
+.form_design input,
+.form_design textarea{
+    width: 100%;
+    color: #fff;
+}
+.form_design input:focus-visible,
+.form_design textarea:focus-visible{
+    outline: 1px solid #00ffe6 !important; 
+}
+
+.form_design p label{
+    font-size: 25px;
+    color: #00ffe6;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px #ff1313;
+}
+
+#id_actors,
+.form_design input:not(.form_design input[type="file"]),
+.form_design textarea,
+.form_design select{
+    border-radius: 5px !important;
+    border: none!important;
+    background: #000 !important;
+    box-shadow: 3px 3px 20px #5d2323;
+    color: #fff !important;
+    padding: 10px;
+}
+
+.form_design p a{
+    color: #00ffe6;
+}
+
+.form_design input{
+    height: 45px;
+}
+
+.form_design textarea{
+    height: 75px;
+}
+
+#id_actors{
+    width: 100%;
+    padding: 20px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+#id_actors input{
+    display: inline;
+    width: inherit;
+    margin-right: 20px;
+}
+
+.role .detail_movie_box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.role a img{
+    width: 100%;
+    height: auto;
+    scale: .5;
+}
+
+#id_actors label{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form_design button{
+    border-radius: 10px;
+    border: none;
+    background: -webkit-linear-gradient(#00ffe6, #42321f, #ff1313) !important;
+    width: 300px;
+    box-shadow: 3px 3px 20px #932929;
+    margin-top: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.form_design textarea[name='description']{
+    height: 150px;
+}
+
+.add_post input[type="file"]::-webkit-file-upload-button{
+    visibility: hidden !important;
+}
+
+.add_post input[type="file"]::before{
+    content: 'Choose file';
+    color: #00ffe6;
+    background: #ffffff36;
+    border: 1px solid #00ffe6;
+    border-radius: 3px;
+    padding: 10px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    height: 41px;
+    box-shadow: none !important;
+}
+
+.add_post p:nth-child(4),
+.add_post p:nth-child(5),
+.add_post p:nth-child(6){
+    display: inline-block;
+    width: 30%;
+}
+
+.add_post p:nth-child(4),
+.add_post p:nth-child(5){
+    margin-right: 2.9%;
+}
+
+.add_actor p:nth-child(4){
+    display: block;
+    width: 100%;
+    margin-right: 0;
+}
+
+.add_actor p:nth-child(5),
+.add_actor p:nth-child(6){
+    width: 48%;
+}
+
+.add_actor p:nth-child(5){
+    margin-right: 4%;
+}
+
+.profile::-webkit-scrollbar{
+    height: 10px;
+}
+
+.search_movie_actor select::-webkit-scrollbar,
+.scroll_effect::-webkit-scrollbar,
+textarea[name='description']::-webkit-scrollbar,
+#id_actors::-webkit-scrollbar,
+.col2::-webkit-scrollbar{
+    width: 7px;
+}
+  
+textarea[name='description']{
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.search_movie_actor select::-webkit-scrollbar-track,
+.scroll_effect::-webkit-scrollbar-track,
+textarea[name='description']::-webkit-scrollbar-track,
+#id_actors::-webkit-scrollbar-track,
+.col2::-webkit-scrollbar-track{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #000;
+}
+
+
+.profile::-webkit-scrollbar-thumb{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: inset 0 0 1px rgb(255, 255, 255);
+}
+.search_movie_actor select::-webkit-scrollbar-thumb,
+.scroll_effect::-webkit-scrollbar-thumb,
+textarea[name='description']::-webkit-scrollbar-thumb,
+#id_actors::-webkit-scrollbar-thumb,
+.col2::-webkit-scrollbar-thumb{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-box-shadow: inset 0 0 1px rgb(255, 255, 255);
+}
+
+.search_movie_actor select::-webkit-scrollbar-thumb:hover,
+.scroll_effect::-webkit-scrollbar-thumb:hover,
+textarea[name='description']::-webkit-scrollbar-thumb:hover,
+#id_actors::-webkit-scrollbar-thumb:hover,
+.col2::-webkit-scrollbar-thumb:hover{
+    background: #000; 
+}
+
+.add_post_reg ul li,
+.add_post_reg span{
+    color: #fff;
+}
+
+.add_post_reg ul{
+    padding-left: 0;
+}
+
+.add_post_reg span{
+    display: block;
+    margin-top: 20px;
+}
+
+.log_reg_drop li{
+    padding-left: 20px;
+    color: #fff !important;
+}
+
+.log_reg_drop li,
+.log_reg_drop{
+    background: linear-gradient(to left, #050505, #2b1212, #000000);
+    border: none !important;
+}
+
+.log_reg_drop{
+    box-shadow: 3px 3px 20px #5d2323;
+}
+
+.form_design{
+    position: relative;
+}
+
+.form_design:after,
+.form_design:before{
+    position: absolute;
+    content: '';
+    z-index: -1;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px #5d2323;
+    background: -webkit-linear-gradient(#00ffe600, #42321f38, #ff131354);
+}
+
+.form_design:before{
+    top: 50px;
+    left: -25%;
+    width: 300px;
+    height: 300px;
+}
+
+.form_design:after{
+    top: -105px;
+    right: -15%;
+    width: 200px;
+    height: 200px;
+}
+
+.add_post_reg p,
+.add_post_reg a{
+    color: #fff;
+}
+
+.add_post_reg a{
+    text-decoration: none;
+}
+
+.log_box{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form_design input[name="image-clear"]{
+    height: inherit !important;
+    box-shadow: none !important;
+    width: min-content !important;
+    margin: 10px;
+}
+
+label[for="image-clear_id"] ~ input[name="image"]{
+    margin-top: 20px;
+}
+
+label[for="image-clear_id"]{
+    font-size: 20px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button{
+    display: none !important;
+}
+
+.search_movie_actor input,
+.search_movie_actor select,
+.search_movie_actor button{
+    width: unset;
+}
+
+.search_movie_actor button{
+    margin-top: 0;
+    min-width: 100px;
+}
+
+.search_movie_actor label,
+.search_movie_actor {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search_movie_actor label{
+    color: #fff;
+    width: unset;
+}
+
+.search_movie_actor select{
+    width: 75px;
+}
+
+.search_movie_actor input{
+    min-width: 350px;
+}
+
+.update_delete_btn{
+    display:  flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.update_delete_btn a:nth-child(1){
+    margin-right: 20px;
+}
+
+.date_of_birth_rate_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date_of_birth_rate_box span{
+    font-size: 25px;
+    color: #00ffe6;
+    text-shadow: 1px 1px 1px #ff1313;
+}
+
+.rate{
+    width: 15px !important;
+}
+.main_title{
+    color: #00ffe6;
+    text-shadow: 1px 1px 1px #ff1313;
+}
+
+.update_delete_btn{
+    width: min-content;
+    min-width: 300px;
+    margin: 50px 0 50px 0;
+    display: flex;
+}
+
+.detail_update_delete_btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.update_delete_btn::before{
+    width: 50px;
+    height: 50px;
+}
+
+.update_delete_btn::after{
+    width: 100px;
+    height: 100px;
+}
+
+.delete_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.delete_box .form_design{
+    justify-content: space-evenly;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile{
+    max-width: 850px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.profile table{
+    position: relative;
+}
+.profile table::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -165px;
+    width: 290px;
+    height: 178px;
+    display: block;
+    background-image: url('../images/moon_img/moon.png');
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.profile table tr{
+    color: #fff;
+}
+button.navbar-toggler{
+    background: #00ffe6 !important;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+}
+
+footer div{
+    color: #fff;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1300px){
+    .search_movie_actor {
+        width: 75%;
+        flex-wrap: wrap !important;
+        justify-content: flex-start;
+        background-image: url('../images/moon_img/moon.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .profile table td,
+    .profile table th{
+        font-size: 15px;
+    }
+
+    .search_movie_actor select,
+    .search_movie_actor input {
+        width: 100%;
+    }
+
+    .search_movie_actor label {
+        margin: 10px 0 10px 0;
+    }
+    .search_movie_actor .btn{
+        width: 35%;
+        margin-top: 10px;
+    }
+    .add_post_box{
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+
+    .navbar .dropdown-menu[data-bs-popper] {
+        top: 139%;
+        left: 50%;
+        margin-top: var(--bs-dropdown-spacer);
+        transform: translateX(-50%);
+    }
+    
+    
+    .navbar .dropdown{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search_movie_actor input{
+        min-width: unset !important;
+    }
+
+
+    .col2 {
+        position: absolute;
+        max-height: 250px;
+        width: 90% !important;
+        bottom: 1%;
+        left: 9%;
+    }
+
+    .detail_img img {
+        height: 575px;
+    }
+
+    .detail_img::before {
+        transform: rotateX(77deg) rotateY(-133deg) rotateZ(-8deg);
+    }
+
+    .actor_content{
+        width: 100% !important;
+    }
+
+    .actor_box img {
+        width: 150%;
+        scale: 1;
+    }
+
+    .detail_main .movies.row {
+        margin-bottom: 75px;
+    }
+
+    .date_of_birth_rate_box {
+        flex-direction: column;
+    }
+
+    .date_of_birth_rate_box span {
+        font-size: 18px;
+    }
+
+    .add_post p:nth-child(4), .add_post p:nth-child(5), .add_post p:nth-child(6) {
+        width: 100%;
+    }
+
+    .profile table td,
+    .profile table th{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .form_design {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .main_title {
+        text-align: center;
+    }
+
+    .search_movie_actor {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 55px;
+    }
+
+    .form_design button {
+        width: 200px;
+    }
+
+    .update_delete_btn {
+        justify-content: space-evenly;
+    }
+
+    .detail_movie_box a{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .detail_main .movies.row {
+        margin-bottom: 101px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .detail_main .movies.row {
+        margin-bottom: 135px;
+    }  
+    .logo img {
+        width: 135px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .add_post_title{
+        margin-bottom: 0;
+    }
+}

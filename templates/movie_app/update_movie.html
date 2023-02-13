@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Update|Movie {% endblock %}
+{% block content  %}
+
+    <!-- Update movie form html -->
+
+    <div class="add_post_box">
+        <h1 class="add_post_title">Update Movie</h1>
+        <form action="" method="POST" enctype="multipart/form-data" class="add_post form_design" aria-multiselectable="true">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            {% if add_actor %}
+            <p>Add Actor<a href="{% url 'actor:add_actor' %}?to_page=update_movie&movie_id={{movie_id}}" data-popup="yes" class="btn tbn success">
+                <i class="fa-solid fa-plus"></i><a></p>
+            {% endif %}
+
+            <button type="submit" class="btn btn-primary">Update Movie</button>
+        </form>
+    </div>
+{% endblock %}

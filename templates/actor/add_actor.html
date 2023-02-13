@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Add|Actor {% endblock %}
+{% block content  %}
+
+    <!-- Add actor form html -->
+
+    <div class="add_post_box">
+        <h1 class="add_post_title title">Add Actor</h1>
+        <form action="" method="POST" enctype="multipart/form-data" class="add_post add_actor form_design">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Add Actor</button>
+        </form>
+    </div>
+{% endblock %}

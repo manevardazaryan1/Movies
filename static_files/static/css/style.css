@@ -508,6 +508,7 @@ nav ul li a{
     box-shadow: 3px 3px 20px #932929;
     margin-top: 20px;
     transition: all .5s ease-in-out;
+    color: #fff;
 }
 
 .form_design textarea[name='description']{

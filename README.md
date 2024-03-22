@@ -1,6 +1,4 @@
-<a id='top'></a>
-
-# Movies
+<h1><a id='top'>Movies</a></h1>
 
 ## Movies project - Django.
 

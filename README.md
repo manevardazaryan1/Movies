@@ -2,7 +2,7 @@
 
 ## Movies project - Django.
 
-![Movies collage](static_files/static/images/Movies-Collage.jpg "Movies app")
+![Movies collage](static_files/static/images/README-Collage/Movies-Collage.jpg "Movies app")
 
 ## Features
 
